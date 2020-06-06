@@ -1,12 +1,13 @@
+
 class Item
 {
     private Goods _Goods;
     private int _quantity;
     private double _price;
 
-    public Item(Goods Goods, int quantity, double price)
+    public Item(Goods goods, int quantity, double price)
     {
-        _Goods = Goods;
+        _Goods = goods;
         _quantity = quantity;
         _price = price;
     }
