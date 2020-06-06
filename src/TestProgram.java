@@ -1,7 +1,9 @@
+import org.json.JSONException;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class TestProgram {
+
     @Test
     public void NameShouldJack(){
         Customer c = new Customer("Jack", 10);
@@ -90,7 +92,7 @@ public class TestProgram {
     }
 
     @Test
-    public void NameShouldJack21(){
+    public void NameShouldJack21() throws JSONException {
         Customer c = new Customer("Jack", 10);
         Bill bill = new Bill(c);
 

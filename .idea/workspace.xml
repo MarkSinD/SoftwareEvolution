@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="582f958b-50a0-4c0f-aced-1ed790aae639" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestProgram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/java_json.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/test004/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/test004/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/test004/Bill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/test004/Bill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/test004/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/test004/Program.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/test004/TestProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/test004/TestProgram.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestProgram.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test004.iml" beforeDir="false" afterPath="$PROJECT_DIR$/test004.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +35,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/Server/hamcrest-core-1.3.jar!/" />
+    <property name="last_opened_file_path" value="C:/Server/json-simple-1.1.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -48,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestProgram">
+  <component name="RunManager" selected="Application.Unnamed">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Program" />
       <module name="test004" />
@@ -61,16 +65,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestProgram" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestProgram.DiscountShould100" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test004" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestProgram" />
-      <option name="METHOD_NAME" value="DiscountShould100" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -90,6 +84,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestProgram" />
       <option name="METHOD_NAME" value="DiscountShouldNegative" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestProgram.NameShouldJack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test004" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestProgram" />
+      <option name="METHOD_NAME" value="NameShouldJack" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -171,18 +175,18 @@
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="JUnit.TestProgram" />
-      <item itemvalue="JUnit.TestProgram.DiscountShould100" />
       <item itemvalue="JUnit.TestProgram.DiscountShouldNegative" />
       <item itemvalue="JUnit.TestProgram.DiscountShould50" />
       <item itemvalue="JUnit.TestProgram.NameShouldJack21" />
+      <item itemvalue="JUnit.TestProgram.NameShouldJack" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestProgram" />
+        <item itemvalue="JUnit.TestProgram.NameShouldJack" />
         <item itemvalue="JUnit.TestProgram.NameShouldJack21" />
         <item itemvalue="JUnit.TestProgram.DiscountShould50" />
         <item itemvalue="JUnit.TestProgram.DiscountShouldNegative" />
-        <item itemvalue="JUnit.TestProgram.DiscountShould100" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +202,7 @@
       <updated>1588500492611</updated>
       <workItem from="1588500495874" duration="350000" />
       <workItem from="1590516130504" duration="1217000" />
-      <workItem from="1591213777390" duration="20429000" />
+      <workItem from="1591213777390" duration="28047000" />
     </task>
     <servers />
   </component>

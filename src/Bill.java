@@ -1,7 +1,9 @@
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.List;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.simple.JSONValue;
+import org.json.simple.parser.JSONParser;
+
+import java.util.*;
 
 public class Bill {
 
@@ -17,13 +19,13 @@ public class Bill {
         _items.add(arg);
     }
 
-    public String statement() {
+    public String statement() throws JSONException {
 
         double totalAmount = 0;
         int totalBonus = 0;
         Iterator<Item> items = _items.iterator();
 
-        String result = tableHeaderOutput();
+        String result = null;
 
         while (items.hasNext()) {
             double thisAmount = 0;
@@ -36,7 +38,7 @@ public class Bill {
                 case Goods.REGULAR:
                     if (each.getQuantity() > 2)
                         discount = sumTotal * 0.03;
-                    bonus = (int) (each.getQuantity() * each.getPrice() * 0.05);
+                    bonus = (int) (sumTotal * 0.05);
                     break;
                 case Goods.SPECIAL_OFFER:
                     if (each.getQuantity() > 10)
@@ -51,16 +53,27 @@ public class Bill {
             if (isDiscounting(each))
                 discount = _customer.useBonus((int) (sumTotal));
             thisAmount = sumTotal - discount;
-            result += "\t" + each.getGoods().getTitle() + "\t" +
-                    "\t" + each.getPrice() + "\t" + each.getQuantity() +
-                    "\t" + "\t" + each.getQuantity() * each.getPrice() +
-                    "\t"  + discount + "\t"  + thisAmount +
-                    "\t" + bonus + "\n";
+
+            Map obj=new LinkedHashMap();
+            obj.put("name",each.getGoods().getTitle());
+            obj.put("price", each.getPrice());
+            obj.put("quantity", each.getQuantity());
+            obj.put("prise", each.getQuantity() * each.getPrice());
+            obj.put("discount", discount);
+            obj.put("sum", thisAmount);
+            obj.put("bonus",bonus);
+            String jsonText = JSONValue.toJSONString(obj);
+            System.out.print(jsonText + "\n");
+
             totalAmount += thisAmount;
             totalBonus += bonus;
         }
-        result += "Сумма счета составляет " + totalAmount + "\n";
-        result += "Вы заработали " + totalBonus + " бонусных балов";
+
+        Map obj=new LinkedHashMap();
+        obj.put("totalAmount",totalAmount);
+        obj.put("totalBonus", totalBonus);
+        String jsonText = JSONValue.toJSONString(obj);
+        System.out.print(jsonText + "\n");
         _customer.receiveBonus(totalBonus);
         return result;
     }
